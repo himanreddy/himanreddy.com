@@ -3,6 +3,7 @@
         <title>Himan Reddy</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <style type="text/css">
             .big-toolbar {
                 background-color: #2196f3;
@@ -40,33 +41,81 @@
                 }
             }
 
+            @media only screen and (max-width: 400px) {
+                .logos {
+                    padding: 0px 16px !important;
+                }
+            }
+
             .profile-image {
-                background: url(http://www.gravatar.com/avatar/9d35c0d9bfea7eeb35b530277a525d05);
+                /*height: 100%;*/
+                position: relative;
+                text-align: center;
+            }
+
+            .profile-image>img {
+                height: 100px;
+                border-radius: 50%;
+                /*transform: translate(-50%, -50%);*/
+                /*position: absolute;*/
+                /*top: 50%;*/
+                /*left: 50%;*/
+                box-shadow: 2px 2px 24px 0px #777;
+                border: 2px solid #FFF;
+            }
+
+            .logos {
+                /*height: 80px;*/
+                width: 32px;
+                padding: 0px 64px;
             }
         </style>
     </head>
     <body ng-cloak>
         
-        <md-content style="height: 100%;">
+        <md-content style="height: 100%;" class="animated fadeIn">
             <div class="big-toolbar">
                 <h1 style="text-align:center; font-weight: 400;">Hello There</h1>
             </div>
             <div class="margin-layout">
                 <div>
-                    <md-card class="intro-card">
+                    <md-card class="intro-card animated flipInX" layout="column" layout-align="center center">
                         <div class="profile-image">
+                            <img src="https://d1qb2nb5cznatu.cloudfront.net/users/1166978-large?1455618947"/>
+                            <h1 style="color: white; font-weight: 400;text-shadow: 1px 1px #989898;">Himan Reddy</h1>
                         </div>
                     </md-card>
                 </div>
-                <div layout="row">
-                    <md-card flex=50>
+                <div layout="row" layout-xs="column">
+                    <md-card class="animated fadeInUp">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">About Me</span>
+                            </md-card-title-text>
+                        </md-card-title>
                         <md-card-content>
-                            Hello
+                            I'm an Engineer who has experience with front-end technologies like angular, react, flux, node and backend technologies like php, java and go. Built a single page ERP/CRM for Sourceeasy. I have also built frameworks in javascript which my team currently uses. I've also dabbled in Android app development.
                         </md-card-content>
                     </md-card>
-                    <md-card flex=50>
+                    <md-card class="animated fadeInUp">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Skills</span>
+                            </md-card-title-text>
+                        </md-card-title>
                         <md-card-content>
-                            World
+                            iOS/Android Design Android iOS Development Angular.JS Javascript Algorithms & Data Structures C CSS DevOps Golang Node.js Socket.io Sails.js Express.js React.js UI/UX Design Material Design Angular Material Design jQuery Backbone.js Meteor.js D3.js
+                        </md-card-content>
+                    </md-card>
+                </div>
+                <div layout="row">
+                    <md-card flex="100" class="animated fadeInUp">
+                        <md-card-content layout="row" layout-align="center center">
+                            <a href="https://github.com/himanreddy"><img class="logos" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="Github"/></a>
+                            <a href="https://www.instagram.com/theschlemiel/"><img class="logos" src="https://www.seeklogo.net/wp-content/uploads/2016/06/Instagram-logo.png" alt="Instagram"/></a>
+                            <a href="https://www.facebook.com/HimanReddy"><img class="logos" src="http://www.highlightful.com/assets/facebook_logo-de33a938d498de6133372f4e5789a13f24b9c3d2ae17281c803ce0770632ab21.png" alt="Facebook"/></a>
+                            <a href="https://twitter.com/himan_reddy"><img class="logos" src="https://cdn3.iconfinder.com/data/icons/social-icons-5/607/Twitterbird.png" alt="Twitter"/></a>
+                            <a href="https://angel.co/himan"><img class="logos" src="http://ouveer.azurewebsites.net/images/AngelList.jpg" alt="AngelList"></a>
                         </md-card-content>
                     </md-card>
                 </div>
