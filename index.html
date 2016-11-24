@@ -1,8 +1,48 @@
-<html>
+<html ng-app="himanreddy">
     <head>
         <title>Himan Reddy</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/angular.material/1.1.1/angular-material.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.1/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.0-rc.1/angular-route.js"></script>
+        <script src="https://cdn.jsdelivr.net/angular.material/1.1.1/angular-material.min.js"></script>
+        <script type="text/javascript">
+            angular.module('himanreddy', ['ngRoute','ngMaterial'])
+
+            // (function (window, angular) {
+            //     angular.module('himanreddy', [
+            //         'ngMaterial'
+            //     ]).controller('siteController', [function () {
+            //         $scope.hell = "Hello World!";
+            //     }]);
+            // }(window, angular))
+        </script>
+    
     </head>
     <body>
-        <h1>Hi there!!</h1>
+        <!--<h1>Hi there!!</h1>-->
+
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <h2>
+                <span>Himan</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="More">
+                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <h1>{{hell}}</h1>
+        </md-content>
+ 
     </body>
 </html>
